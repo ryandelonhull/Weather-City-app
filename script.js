@@ -41,7 +41,7 @@ $(document).ready(function () {
     }).then(function (response) {
       console.log(response);
       console.log(JSON.stringify(response));
-      $(".name").html("<h1>" + response.name + /*currentDate + */ "</h1>");
+      $(".name").html("<h1>" + response.name + "</h1>");
       var tempF = (response.main.temp - 273.15) * 1.8 + 32;
       $(".temp").text(
         "Temperature: " + tempF.toFixed(2) + " Degrees Fahrenheit"
@@ -80,21 +80,26 @@ $(document).ready(function () {
         datatype: "json",
       }).then(function (response) {
         console.log(JSON.stringify(response));
-        for(var i = 0; i < response.list.length; i++){
-            if(response.list[i].dt_txt.indexOf("15:00:00") !== -1){
-                var row = $("<div>").addClass("row");
-                var column = $("<div>").addClass("col-md-2");
-                var card = $("<div>").addClass("card");
-                var dateTitle = $("<h5>").text(new Date(response.list[i].dt_txt).toLocaleDateString());
-                var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + response.list[i].weather[0].icon + ".png");
-                var temp = $("<p>").text(response.list[i].main.temp_max);
-                var humi = $("<p>").text(response.list[i].main.humidity);
-                row.append(column.append(card.append(dateTitle, img, temp, humi)));
-                $("#cityForecast").append(row);
-                
-            }
+        for (var i = 0; i < response.list.length; i++) {
+          if (response.list[i].dt_txt.indexOf("15:00:00") !== -1) {
+            var row = $("<div>").addClass("row");
+            var column = $("<div>").addClass("col-md-2");
+            var card = $("<div>").addClass("card");
+            var dateTitle = $("<h5>").text(
+              new Date(response.list[i].dt_txt).toLocaleDateString()
+            );
+            var img = $("<img>").attr(
+              "src",
+              "http://openweathermap.org/img/w/" +
+                response.list[i].weather[0].icon +
+                ".png"
+            );
+            var temp = $("<p>").text(response.list[i].main.temp_max);
+            var humi = $("<p>").text(response.list[i].main.humidity);
+            row.append(column.append(card.append(dateTitle, img, temp, humi)));
+            $("#cityForecast").append(row);
+          }
         }
-        
       });
     });
   }

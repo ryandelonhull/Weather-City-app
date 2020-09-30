@@ -1,3 +1,4 @@
 div.card {
-    display: across;
+    float: center;
+    display: flex;
 }

@@ -103,5 +103,4 @@ $(document).ready(function () {
       });
     });
   }
-  // $(document).on("click", ".city", alertMovieName);
 });

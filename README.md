@@ -19,7 +19,7 @@ Retrieve data from the Openweather application's API and use it in the context o
 
 ## Deployed Link
 
-
+ https://ryandelonhull.github.io/Weather-City-app/
 
 
 

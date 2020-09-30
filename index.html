@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+  
     <title>Weather Day App</title>
   </head>
   <body>
@@ -16,23 +16,29 @@
           <h1 class="display-4">Weather Dashboard</h1>
         </div>
     </header>
-    <form>
-        <div class="form-group bg-light float-left">
+    <form  class="form-group bg-light float-left">
+        <div> 
           <label for="city-search">Search for a City:</label>
           <input type="text" class="form-control" id="cityInput">
         </div>
         <button type="submit" id="searchButton" class="btn btn-primary">Search</button>
+
         <div id="citiesSearched"></div>
     </form>
     <div class="card" id="cityInfo">
         <div class="float-left" id="cityToday">
-            <div class="name"></div>
-            <div class="temp"></div>
-            <div class="humidity"></div>
-            <div class="speed"></div>
+            <div class="name">City</div>
+            <div class="temp">Temperature</div>
+            <div class="humidity">Humidity</div>
+            <div class="speed">Wind Speed</div>
+            <div class="uvIndex">UV Index</div>
         </div>
-        <div class="mt-3" id="cityForecast"></div>
+        <div id="cityForecast">
+
+        </div>
+
     </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

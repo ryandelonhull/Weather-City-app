@@ -33,7 +33,7 @@ $(document).ready(function () {
     $.ajax({
       type: "GET",
       url:
-        "http://api.openweathermap.org/data/2.5/weather?q=" +
+        "https://api.openweathermap.org/data/2.5/weather?q=" +
         citySearch +
         "&appid=" +
         APIkey,

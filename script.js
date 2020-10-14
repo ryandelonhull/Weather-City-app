@@ -57,7 +57,7 @@ $(document).ready(function () {
       $.ajax({
         type: "GET",
         url:
-          "http:api.openweathermap.org/data/2.5/uvi?lat=" +
+          "https:api.openweathermap.org/data/2.5/uvi?lat=" +
           lat +
           "&lon=" +
           lon +
@@ -72,7 +72,7 @@ $(document).ready(function () {
       $.ajax({
         type: "GET",
         url:
-          "http://api.openweathermap.org/data/2.5/forecast?q=" +
+          "https://api.openweathermap.org/data/2.5/forecast?q=" +
           citySearch +
           "&appid=" +
           APIkey +
@@ -90,7 +90,7 @@ $(document).ready(function () {
             );
             var img = $("<img>").attr(
               "src",
-              "http://openweathermap.org/img/w/" +
+              "https://openweathermap.org/img/w/" +
                 response.list[i].weather[0].icon +
                 ".png"
             );
